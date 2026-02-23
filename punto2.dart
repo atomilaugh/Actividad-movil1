@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void main() {
+void notas() {
   double nota1;
   double nota2;
   double nota3;
