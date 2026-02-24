@@ -1,4 +1,3 @@
-//menu de ejercicios, cada uno con su respectiva función, el usuario elige el ejercicio a ejecutar, se ejecuta y luego vuelve al menu para elegir otro ejercicio o salir del programa
 import 'dart:io';
 
 import 'punto1.dart';
@@ -9,47 +8,46 @@ import 'punto5.dart';
 import 'punto6.dart';
 
 void main() {
-  print("\n---------------------MENU-----------------------\n");
+  int opcion = 0;
 
-  print('\n\nEjercicio1:calcular la distancia recorrida ');
-  automovil();
+  do {
+    print("\n--------------------- MENU ---------------------\n");
+    print("1. Calcular la distancia recorrida");
+    print("2. Promedio de un estudiante");
+    print("3. Puntaje futbolístico");
+    print("4. Planilla de un empleado");
+    print("5. Hipotenusa de un triángulo rectángulo");
+    print("6. Temperaturas en grados Celsius");
+    print("7. Salir");
+    print("\nSeleccione una opción: ");
 
-  print('\nEjercicio2: Promedio de un estudiante');
-  notas();
+    opcion = int.parse(stdin.readLineSync()!);
 
-  print('\nEjercicio3: algoritmo básico puntaje futbolístico');
-  partidos();
+    switch (opcion) {
+      case 1:
+        automovil();
+        break;
+      case 2:
+        notas();
+        break;
+      case 3:
+        partidos();
+        break;
+      case 4:
+        empleado();
+        break;
+      case 5:
+        hipotenusa();
+        break;
+      case 6:
+        horno();
+        break;
+      case 7:
+        print("Saliendo del programa...");
+        break;
+      default:
+        print("Opción no válida");
+    }
 
-  print('Ejercicio 4: Planilla de un empleado');
-  empleado();
-
-  print('\nEjercicio 5: Hipotenusa de un triángulo rectángulo');
-  hipotenusa();
-
-  print('\nEjercicio 6: temperaturas en grados Celsius centígrado');
-  horno();
-
-
-int variable = int.parse (stdin.readLineSync()!);
-switch (variable) {
-  case 1:
-    print('Ejercicio 1');
-    break;
-  case 2:
-    print('Ejercicio 2');
-    break;
-  case 3:
-    print('Ejercicio 3');
-    break;
-  case 4:
-    print('Ejercicio 4');
-    empleado();
-    break;
-  case 5:
-    print('Ejercicio 5');
-    hipotenusa();
-    break;
-  default:
-    print('Opción no válida');
-}
+  } while (opcion != 7);
 }
