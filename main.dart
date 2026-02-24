@@ -20,7 +20,7 @@ void main() {
   print('\nEjercicio3: algoritmo básico puntaje futbolístico');
   partidos();
 
-print('Ejercicio 4: Planilla de un empleado');
+  print('Ejercicio 4: Planilla de un empleado');
   empleado();
 
   print('\nEjercicio 5: Hipotenusa de un triángulo rectángulo');
