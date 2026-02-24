@@ -4,14 +4,20 @@
 
 // D = V * T
 
+import 'dart:io';
+
 void automovil() {
   double velocidad;
   double tiempo;
+  double distancia;
 
-  velocidad = 20.0;
-  tiempo = 10.0;
+  print("Ingrese la velocidad del automóvil en m/s:");
+  velocidad = double.parse(stdin.readLineSync()!);
 
-  double distancia = velocidad * tiempo;
+  print("Ingrese el tiempo de recorrido en segundos:");
+  tiempo = double.parse(stdin.readLineSync()!);
+
+  distancia = velocidad * tiempo;
 
   print("La distancia recorrida por el automóvil es: $distancia metros");
 }
